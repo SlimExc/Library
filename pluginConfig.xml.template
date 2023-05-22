@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conf>
+	<!-- Valid values for all Flags: Enabled / Disabled -->
+	<Exceptions>
+		<SlimExceptions>Enabled</SlimExceptions> 
+		<ThrowableTypes>All</ThrowableTypes> <!-- Valid values: All, Fundamental, Single -->
+		<SingleType>uint</SingleType> <!-- For the ThrowableTypes="Single". Valid values: char, schar, uchar, ushort, short, uint, int, ulong, long, ulonglong, longlong, float, double-->
+		<Buffersize>10</Buffersize>	<!-- Size of the Exceptionbuffer in Bytes (default=10) (Not used if mode is onlyOneType)-->
+	</Exceptions>
+
+	<RTTI>
+		<SlimRTTI>Enabled</SlimRTTI>	
+		<PointerTypes>Enabled</PointerTypes>	
+		<Qualifiers>Enabled</Qualifiers> 	
+	</RTTI>
+	
+	<Filters>
+		<InitIgnoreFile>Disabled</InitIgnoreFile>	
+		<InitFiltered>Enabled</InitFiltered>	
+		<WhitelistStrategy>Disabled</WhitelistStrategy> <!-- Disabled = blacklist / Enabled = whitelist -->
+		<IgnoreFile></IgnoreFile> <!-- Path to the ignore-File -->
+	</Filters>
+	
+	<Diagnostics>	<!-- Possible Values for all entries: Ignore, Info, Warning, Error -->
+		<WrongGCCVersion>Error</WrongGCCVersion> 
+		<StdTerminateOnException>Error</StdTerminateOnException>
+		<PossiblyUncaughtException>Warning</PossiblyUncaughtException>
+	</Diagnostics>
+	
+	<Debugging>
+		<Verbose>Disabled</Verbose>	
+		<GenerateAST>Disabled</GenerateAST>	
+		<Directory></Directory>	<!-- Path to generate the AST-Output -->
+	</Debugging>
+</conf>
